@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rednek</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <h1>Rednek Burgers</h1>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="./img/rednek-logo.png" alt="Logo" />
+          </a>
         </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#home">Strona Główna</a></li>
+            <li><a href="#produkty">Menu</a></li>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
     </header>
 
-    <!-- CATEGORIES -->
-    <section id="categories" class="categories">
-    <div class="category" data-category="pulledPorkBurgers">
-        <img src="./images/burger-koziol.jpg" alt="Pulled">
-        <p>Pulled</p>
-    </div>
-    <div class="category" data-category="smashBurgers">
-        <img src="./images/smash-czizer.jpg" alt="Smash">
-        <p>Smash</p>
-    </div>
-    <div class="category" data-category="zapiekanki">
-        <img src="./images/zapiekanka-swojska.jpg" alt="Zapiekanki">
-        <p>Zapiekanki</p>
-    </div>
-    <div class="category" data-category="dodatki">
-        <img src="./images/dodatki-frytki.jpg" alt="Dodatki">
-        <p>Dodatki</p>
-    </div>
-    <div class="category" data-category="napoje">
-        <img src="./images/napoje-lemoniada.png" alt="Napoje">
-        <p>Napoje</p>
-    </div>
-</section>
-
-
-    <!-- MENU -->
-    <section id="container" class="container">
-    </section>
-
-    <script src="index.js" type="module"></script>
-</body>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>
