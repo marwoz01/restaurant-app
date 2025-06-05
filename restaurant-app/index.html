@@ -3,41 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rednek</title>
+    <title>Rednek Burgers</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <a href="/">
-            <img src="./img/rednek-logo.png" alt="Logo" />
-          </a>
+    <div class="hero-background">
+      <header>
+        <div class="container">
+          <div class="logo-area">
+            <h1>REDNEK<span class="dot">.</span> BURGERS</h1>
+            <p class="subtitle">Burgery, których musisz spróbować</p>
+          </div>
+
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">O nas</a></li>
+              <li><a href="#">Dostawa</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+          </nav>
+
+          <div class="info-panel">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <div class="cart">
+              <span class="price">65.95zł</span>
+              <small>5 burgers</small>
+            </div>
+
+            <i class="fa-solid fa-truck"></i>
+            <div class="delivery-time">
+              <span>Dostawa</span>
+              <small>12:00 - 22:00</small>
+            </div>
+
+            <i class="fa-solid fa-phone"></i>
+            <div class="phone">
+              <span>123 456 789</span>
+              <a href="#" class="callback">Zamów</a>
+            </div>
+          </div>
         </div>
+      </header>
 
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#home">Strona Główna</a></li>
-            <li><a href="#produkty">Menu</a></li>
-            <li><a href="#o-nas">O nas</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </nav>
+      <section class="hero">
+        <div class="container">
+          <div>
+            <h1>NOWY SMASH "SEROWY ZATOR"</h1>
+            <p>
+              3x mięso wołowe, 3x cheddar, 3x bekon, pikle, cebula, sałata. Sos:
+              hamburgerowy.
+            </p>
+            <div class="order-box">
+              <h3>49.00zł</h3>
+              <button class="btn">Zamów</button>
+            </div>
+          </div>
 
-        <button class="hamburger" id="hamburger">☰</button>
-      </div>
-    </header>
+          <div>
+            <img src="./img/smash-triple.png" alt="Burger Serowy Zator" />
+          </div>
+        </div>
+      </section>
 
-    <footer></footer>
-    <script src="script.js"></script>
+      <section class="menu">
+        <div class="container menu-container">
+          <h1>MENU</h1>
+
+          <nav class="categories-nav">
+            <ul>
+              <li>
+                <a href="#" class="category" data-category="smashBurgers"
+                  >Smash</a
+                >
+              </li>
+              <li>
+                <a href="#" class="category" data-category="pulledPorkBurgers"
+                  >Pulled</a
+                >
+              </li>
+              <li>
+                <a href="#" class="category" data-category="zapiekanki"
+                  >Zapiekanki</a
+                >
+              </li>
+              <li>
+                <a href="#" class="category" data-category="dodatki">Dodatki</a>
+              </li>
+              <li>
+                <a href="#" class="category" data-category="napoje">Napoje</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="container" class="menu-items"></div>
+        </div>
+      </section>
+
+      <section class="hero about">
+        <div class="container">
+          <div>
+            <h1>O nas</h1>
+            <p>
+              W dzień burgery i zapiekanki z soczystym
+              <strong>#pulledpork</strong>, wieczorami (i nie tylko) szeroki
+              wybór kraftowego piwa. Rednek karmi również w wersji wege. 🙂
+              Wszystko to przy dźwiękach <strong>country</strong> i w
+              towarzystwie wystroju DIY.
+            </p>
+            <p>
+              Nasze burgery robimy z
+              <strong>najwyższej jakości wołowiny</strong>, świeżych bułek i
+              autorskich sosów – bez kompromisów. Każda pozycja w menu to wynik
+              pasji i prób, by osiągnąć idealne proporcje smaków.
+            </p>
+            <p>
+              Wpadnij na szybki lunch, wieczorne piwo z ekipą albo rodzinny
+              obiad. Tworzymy miejsce, gdzie jedzenie ma duszę, klimat –
+              charakter, a klienci – wracają.
+            </p>
+          </div>
+          <div>
+            <img src="./img/o-nas.png" alt="O nas" />
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-text">
+            <h1>Kontakt</h1>
+            <p>
+              Masz pytania lub chcesz złożyć zamówienie telefonicznie?
+              Skontaktuj się z nami!
+            </p>
+            <p>
+              <strong>Telefon:</strong> <a href="tel:123456789">123 456 789</a>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:kontakt@rednekburgers.pl"
+                >kontakt@rednekburgers.pl</a
+              >
+            </p>
+            <p><strong>Adres:</strong> Ul. Burgerowa 12, 12-345 Gdańsk</p>
+          </div>
+          <div class="contact-map">
+            <div class="map-overlay"></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.432973746574!2d21.012228!3d52.229675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zNTLCsDEzJzQ2Lj8iTiAyMcKwMDAnNDQuOCJF!5e0!3m2!1spl!2spl!4v0000000000000"
+              width="100%"
+              height="300"
+              style="border-radius: 12px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
