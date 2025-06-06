@@ -25,30 +25,36 @@
 
           <nav class="main-nav">
             <ul>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">O nas</a></li>
-              <li><a href="#">Dostawa</a></li>
-              <li><a href="#">Kontakt</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">O nas</a></li>
+              <li><a href="#contact">Kontakt</a></li>
             </ul>
           </nav>
 
           <div class="info-panel">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <div class="cart">
-              <span class="price">65.95zł</span>
-              <small>5 burgers</small>
+            <div class="cart" id="cart-icon">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <small>Koszyk</small>
             </div>
 
-            <i class="fa-solid fa-truck"></i>
+            <div id="cart-panel">
+              <h2>Twój koszyk</h2>
+              <div id="cart-items"></div>
+
+              <div id="cart-summary">
+                <p id="cart-total">Razem: 0.00 zł</p>
+                <button id="checkout-btn" class="btn">Zamów</button>
+              </div>
+            </div>
+
             <div class="delivery-time">
-              <span>Dostawa</span>
+              <i class="fa-solid fa-truck"></i>
               <small>12:00 - 22:00</small>
             </div>
 
-            <i class="fa-solid fa-phone"></i>
             <div class="phone">
-              <span>123 456 789</span>
-              <a href="#" class="callback">Zamów</a>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#" class="callback">123 456 789</a>
             </div>
           </div>
         </div>
@@ -64,7 +70,7 @@
             </p>
             <div class="order-box">
               <h3>49.00zł</h3>
-              <button class="btn">Zamów</button>
+              <button class="btn"><a href="#menu">Zamów</a></button>
             </div>
           </div>
 
@@ -74,7 +80,7 @@
         </div>
       </section>
 
-      <section class="menu">
+      <section class="menu" id="menu">
         <div class="container menu-container">
           <h1>MENU</h1>
 
@@ -108,7 +114,7 @@
         </div>
       </section>
 
-      <section class="hero about">
+      <section class="hero about" id="about">
         <div class="container">
           <div>
             <h1>O nas</h1>
@@ -137,7 +143,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="contact-text">
             <h1>Kontakt</h1>
