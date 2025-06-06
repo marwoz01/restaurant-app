@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  scroll-behavior: smooth;
 }
+/* ---------- STRUKTURA ---------- */
 .container {
   width: 90%;
   margin: 0 auto;
@@ -37,16 +39,11 @@
   background-size: 100% auto;
   background-position: center;
 }
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+header .container,
 .hero .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
 }
 .logo-area h1 {
   font-size: 1.5rem;
@@ -60,6 +57,7 @@ header .container {
   color: #aaa;
   margin-top: 0.25rem;
 }
+/* ---------- NAWIGACJA ---------- */
 .main-nav ul,
 .menu ul {
   display: flex;
@@ -78,6 +76,7 @@ header .container {
   color: red;
   transition: 0.2s ease-out;
 }
+/* ---------- PANEL INFORMACYJNY ---------- */
 .info-panel {
   display: flex;
   align-items: center;
@@ -90,19 +89,81 @@ header .container {
 .info-panel .delivery-time,
 .info-panel .phone {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.85rem;
+  cursor: pointer;
 }
 .info-panel .cart .price,
 .info-panel .delivery-time .price,
 .info-panel .phone .price,
 .info-panel .cart .callback,
 .info-panel .delivery-time .callback,
-.info-panel .phone .callback {
+.info-panel .phone .callback,
+.info-panel .cart span,
+.info-panel .delivery-time span,
+.info-panel .phone span,
+.info-panel .cart small,
+.info-panel .delivery-time small,
+.info-panel .phone small,
+.info-panel .cart a,
+.info-panel .delivery-time a,
+.info-panel .phone a {
+  color: #fff;
+  font-weight: bold;
+}
+/* ---------- PANEL KOSZYKA ---------- */
+#cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+#cart-icon i {
+  color: red;
+}
+#cart-icon span {
   color: red;
   font-weight: bold;
 }
+#cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100vh;
+  background: black;
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+}
+#cart-panel.open {
+  right: 0;
+}
+#cart-summary {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cart-summary #cart-total {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
+#cart-summary #checkout-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+}
+/* ---------- BOHATER ---------- */
 .hero {
   display: flex;
   height: 95vh;
@@ -122,13 +183,20 @@ header .container {
 .hero img {
   height: 38rem;
 }
-.order-box {
-  display: flex;
-  gap: 2rem;
+.hero.about .container {
+  width: 70%;
 }
-.order-box h3 {
-  font-size: 2rem;
+.hero.about img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
 }
+.hero.about p {
+  max-width: 50ch;
+}
+/* ---------- ZAMÓWIENIE ---------- */
 .order-box {
   display: flex;
   gap: 2rem;
@@ -151,21 +219,21 @@ header .container {
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.45);
   transition: 0.2s ease-out;
 }
+/* ---------- MENU ---------- */
 .menu h1 {
   font-size: 4rem;
 }
-.menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
+.menu-items,
 #container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+}
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .card {
   width: 300px;
@@ -185,28 +253,16 @@ header .container {
 .card .card-content {
   margin-top: 1rem;
 }
-.card .card-content h2 {
-  font-size: 1.2rem;
+.card .card-content h2,
+.card .card-content h3,
+.card .card-content p {
   margin-bottom: 0.5rem;
 }
 .card .card-content p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #ccc;
-  margin-bottom: 0.5rem;
 }
-.hero.about .container {
-  width: 70%;
-}
-.hero.about img {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.hero.about p {
-  max-width: 50ch;
-}
+/* ---------- KONTAKT ---------- */
 .contact {
   padding: 4rem 0;
 }
