@@ -28,12 +28,6 @@ export const pulledPorkBurgers = [
     image: "./burger-tlustypapudrak.jpg",
   },
   {
-    name: "Koleś",
-    price: 39.0,
-    ingredients: ["pulled pork", "colesław", "sałata", "sos chimichurri-majo"],
-    image: "./burger-rednek.jpg",
-  },
-  {
     name: "Lazur",
     price: 39.0,
     ingredients: [
@@ -89,20 +83,6 @@ export const smashBurgers = [
       "sos Dijonaise",
     ],
     image: "./smash-dijonaise.jpg",
-  },
-  {
-    name: "Smash Cebulą",
-    price: 34.0,
-    ingredients: [
-      "2x wołowina",
-      "2x cheddar",
-      "marynowana cebula",
-      "grillowana cebula",
-      "prażona cebulka",
-      "sałata lodowa",
-      "sos czosnkowy",
-    ],
-    image: "./smash-cebula.jpg",
   },
   {
     name: "Smash Bekon",
